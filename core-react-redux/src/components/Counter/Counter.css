@@ -1,0 +1,25 @@
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sec-container button {
+    width: 50px;
+    background-color: blueviolet;
+    border: none;
+    cursor: pointer;
+    color: azure;
+    font-size: large;
+    margin: 1px;
+}
+
+.sec-container input {
+    width: 70px;
+    border-bottom: 2px solid rgb(161, 5, 5);
+}
