@@ -1,0 +1,19 @@
+.geoloaction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.geoloaction-container h2 {
+    text-decoration: underline;
+}
+
+.geoloaction-container p {
+    margin: 2px;
+    background-color: antiquewhite;
+}
+
+.locations-list {
+    margin-top: 10px;
+}
