@@ -49,3 +49,6 @@ const store = createStore(reducer, composeWithDevTools(
 # react-redux hooks
 1. useDispatch hook - provides function to dispatch an action
 2. useSelector - using useSelector we can select desired state, callback passed to useSelector received state object as argument and using that state we can return specific state value
+
+# Asynchronous actions using redux-thunk
+thunk allows to return function with dispatch function as an argument instead of pure JS objects
