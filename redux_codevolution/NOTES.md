@@ -5,11 +5,34 @@ Basic Example of core redux with react application
 redux, react-redux
 
 # mapStateToProps
-Implicit way of binding states to props
+Implicit way of binding redux states to component props
 A function which gets state as an argument and return object containing desired states which application will receive through props
+If not required this function, just pass null to the connect function
+
+Example - 
+const mapStateToProps = (state, ownProps) => {
+  const itemState =
+    ownProps.itemName === "cake" ? state.cake.numOfCakes : state.bike.numOfBikes;
+
+  return {
+    itemCount: itemState,
+  };
+};
+
 
 # mapDispatchToProps
 Function gets dispatch as an argument and returns object of functions dispatching desired actions
+
+Example - 
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const dispatchFunction =
+    ownProps.itemName === "cake"
+      ? () => dispatch(buyCake())
+      : () => dispatch(buyBike());
+  return {
+    buyItem: dispatchFunction,
+  };
+};
 
 # connect - from react-redux
 Function helps to connect react application with redux

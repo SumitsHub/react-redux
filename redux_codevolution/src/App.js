@@ -3,6 +3,7 @@ import BikeContainer from "./components/BikeContainer/BikeContainer";
 import { Provider } from "react-redux";
 import store from './redux/store';
 import CakeContainer from "./components/CakeContainer/CakeContainer";
+import ItemContainer from "./components/ItemContainer/ItemContainer";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
         <BikeContainer />
         <hr/>
         <CakeContainer />
+        <hr/>
+        <ItemContainer itemName="cake"/>
+        <hr/>
+        <ItemContainer itemName="bike"/>
       </div>
     </Provider>
   );
