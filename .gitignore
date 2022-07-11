@@ -1,3 +1,4 @@
 ./redux-toolkit/node_modules
 ./core-react-redux/node_modules
 ./redux_codevolution/node_modules
+./redux-saga/redux-saga-demo/node_modules
