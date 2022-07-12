@@ -1,7 +1,8 @@
-import { IMAGES } from "../constants";
+import { IMAGES } from "../constants"
 
-export const fetchImagesRequest = () => ({
-    type: IMAGES.REQUEST
+export const fetchImagesRequest = (key) => ({
+    type: IMAGES.REQUEST,
+    payload: {key}
 })
 
 export const fetchImageSuccess = images => ({
