@@ -13,6 +13,9 @@ function App(props) {
   return <div>Redux Saga</div>;
 }
 
-export default connect(null, {
+const mapStateToProps = state => {
+  return { users: state.users };
+};
+export default connect(mapStateToProps, {
   getUsersRequest,
 })(App);
