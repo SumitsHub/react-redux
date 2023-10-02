@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-
+import { createUserRequest } from "../actions/users";
 export class NewUserForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const formGroup = new FormData(e.currentTarget);
-
-    console.log(Object.fromEntries(formGroup));
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
+    console.log(data);
+    this.props.createUserRequest(data);
   };
   render() {
     return (
@@ -33,6 +34,8 @@ export class NewUserForm extends Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  createUserRequest,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewUserForm);
