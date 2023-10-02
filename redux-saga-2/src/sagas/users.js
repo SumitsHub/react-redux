@@ -14,7 +14,9 @@ function* getUsers() {
     const result = yield call(api.getUsers);
     console.log(result);
     yield put(actions.getUsersSuccess({ items: result.data }));
-  } catch (error) {}
+  } catch (error) {
+    yield put(actions.userError({ error: "Getting users failed" }));
+  }
 }
 
 function* watchGetUsersRequest() {
@@ -26,7 +28,9 @@ function* createuser(action) {
   try {
     yield call(api.createUser, action.payload);
     yield call(getUsers);
-  } catch (error) {}
+  } catch (error) {
+    yield put(actions.userError({ error: "Create users failed" }));
+  }
 }
 
 function* watchCreateUserRequest() {
@@ -37,7 +41,9 @@ function* deleteUser(id) {
   try {
     yield call(api.deleteUser, id);
     yield call(getUsers);
-  } catch (error) {}
+  } catch (error) {
+    yield put(actions.userError({ error: "Delete users failed" }));
+  }
 }
 
 function* watchDeleteUser() {

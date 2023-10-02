@@ -3,6 +3,7 @@ export const Types = {
   GET_USERS_SUCCESS: "GET_USERS_SUCCESS",
   CREATE_USER_REQUEST: "CREATE_USER_REQUEST",
   DELETE_USER_REQUEST: "DELETE_USER_REQUEST",
+  USER_REQUEST_ERROR: "USER_REQUEST_ERROR",
 };
 
 export const getUsersRequest = () => {
@@ -29,4 +30,9 @@ export const createUserSuccess = () => ({});
 export const deleteUserRequest = id => ({
   type: Types.DELETE_USER_REQUEST,
   payload: id,
+});
+
+export const userError = ({ error }) => ({
+  type: Types.USER_REQUEST_ERROR,
+  payload: { error },
 });
