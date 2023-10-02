@@ -2,6 +2,7 @@ export const Types = {
   GET_USERS_REQUEST: "GET_USERS_REQUEST",
   GET_USERS_SUCCESS: "GET_USERS_SUCCESS",
   CREATE_USER_REQUEST: "CREATE_USER_REQUEST",
+  DELETE_USER_REQUEST: "DELETE_USER_REQUEST",
 };
 
 export const getUsersRequest = () => {
@@ -24,3 +25,8 @@ export const createUserRequest = ({ firstName, lastName }) => ({
 });
 
 export const createUserSuccess = () => ({});
+
+export const deleteUserRequest = id => ({
+  type: Types.DELETE_USER_REQUEST,
+  payload: id,
+});

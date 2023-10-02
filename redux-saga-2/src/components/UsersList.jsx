@@ -1,6 +1,12 @@
+import { useDispatch } from "react-redux";
 import { Button, ListGroup, ListGroupItem } from "reactstrap";
+import { deleteUserRequest } from "../actions/users";
 
 function UsersList({ users }) {
+  const dispatch = useDispatch();
+  const handleDelete = id => {
+    dispatch(deleteUserRequest(id));
+  };
   return (
     <ListGroup>
       {users
@@ -25,7 +31,11 @@ function UsersList({ users }) {
                   {user.firstName} {user.lastName}
                 </div>
                 <div>
-                  <Button outline color="danger">
+                  <Button
+                    outline
+                    color="danger"
+                    onClick={() => handleDelete(user.id)}
+                  >
                     Delete
                   </Button>
                 </div>
