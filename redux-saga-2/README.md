@@ -6,7 +6,7 @@ npm create vite@latest -- --template react
 ### redux dependencies
 npm install --save redux redux-saga react-redux
 
-### other dependencied
+### other dependencies
 npm install --save reactstrap bootstrap axios
 
 ### json-server
