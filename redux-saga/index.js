@@ -9,21 +9,23 @@ function* getNum() {
 } 
 
 const numGenerator = getNum();
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next());
-console.log(numGenerator.next()); // {value: 10, done: true}
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next());
+console.dir(numGenerator.next()); // {value: 10, done: true}
 
 const numGenerator2 = getNum();
 //* iterating using for of loop - only prints yielded values
 for(value of numGenerator2) {
     console.log(value);
 }
-console.log(numGenerator2.next());
+console.log(numGenerator2.next()); // { value: undefined, done: true }
+console.log(numGenerator2.next()); // { value: undefined, done: true }
+
 

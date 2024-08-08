@@ -32,7 +32,7 @@ export class NewUserForm extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({}); // by default it returns null
 
 const mapDispatchToProps = {
   createUserRequest,
